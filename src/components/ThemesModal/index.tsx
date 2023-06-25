@@ -1,4 +1,5 @@
 import { Container, Content, Theme } from "./styles";
+import { themes } from "../../utils/themes";
 
 export function ThemesModal() {
   return (
@@ -6,12 +7,11 @@ export function ThemesModal() {
       <Content>
         <h2>Choose one of the following themes</h2>
         <div>
-          <Theme type="button">Programing 💻</Theme>
-          <Theme>Programing 💻</Theme>
-          <Theme>Programing 💻</Theme>
-          <Theme>Programing 💻</Theme>
-          <Theme>Programing 💻</Theme>
-          <Theme>Programing 💻</Theme>
+          {themes.map((theme) => (
+            <Theme type="button" key={theme.id}>
+              {theme.name}
+            </Theme>
+          ))}
         </div>
       </Content>
     </Container>

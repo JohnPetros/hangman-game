@@ -1,10 +1,12 @@
+import { Game } from "./components/Game"
 import { ThemesModal } from "./components/ThemesModal";
 import GlobalStyles from "./styles/global";
 
 export function App() {
   return (
     <main>
-      <ThemesModal />
+      <Game />
+      {/* <ThemesModal /> */}
       <GlobalStyles />
     </main>
   );
