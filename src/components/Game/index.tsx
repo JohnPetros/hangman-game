@@ -5,7 +5,7 @@ import { Keyboard } from "../Keyboard";
 import { Container, Letter, FinalMessage } from "./styles";
 
 export function Game() {
-  const { word, _resetWord } = useWord();
+  const { word, _resetWord, theme } = useWord();
   const [errorsAmount, setErrorsAmount] = useState(0);
   const [correctedLetters, setCorrectedLetters] = useState<string[]>([]);
   const [incorrectedLetters, setIncorrectedsLetters] = useState<string[]>([]);
@@ -28,6 +28,11 @@ export function Game() {
         ...currentCorrectedLetters,
         letter,
       ]);
+
+      if (correctedLetters.length === word.length - 1) {
+        setEndGameMessage("You won 😁!");
+      }
+
       return;
     }
 
@@ -39,15 +44,15 @@ export function Game() {
     const newErrorsAmount = errorsAmount + 1;
     setErrorsAmount(newErrorsAmount);
 
-    if (correctedLetters.length === word.length) {
-      setEndGameMessage("You won 😁!");
-    } else if (newErrorsAmount === 6) {
+    if (newErrorsAmount === 6) {
       setEndGameMessage("You lost 😢!");
     }
   }
 
   return (
     <Container>
+      <h1>Hangman Game</h1>
+
       <Hangman errorsAmount={errorsAmount} />
 
       <div className="letters">
@@ -61,9 +66,14 @@ export function Game() {
         ))}
       </div>
 
+      <p className="theme">
+        Theme: <strong>{theme}</strong>
+      </p>
+
       {endGameMessage ? (
         <FinalMessage isWin={endGameMessage.includes("won")}>
-          {endGameMessage + "\nThe word was: "} <span>{word}</span>
+          {endGameMessage + "\nThe word was: "}{" "}
+          <span>{word.toUpperCase()}</span>
         </FinalMessage>
       ) : (
         <Keyboard

@@ -6,14 +6,36 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  h1 {
+    color: var(--light);
+    text-decoration: underline;
+    letter-spacing: 2px;
+
+    margin: 1.2rem 0;
+  }
+
   .letters {
     display: flex;
     justify-content: center;
   }
 
+  > p.theme {
+    margin-top: 2.4rem;
+
+    color: var(--secondary);
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    strong {
+      color: var(--light);
+      text-transform: capitalize;
+    }
+  }
+
   > button {
     display: block;
-    margin-top: 4.2rem;
+    margin-top: 3.6rem;
     margin-inline: auto;
     padding: 1.2rem;
     border-radius: var(--border-radius);
@@ -70,5 +92,6 @@ export const FinalMessage = styled.p<FinalMessageProps>`
   > span {
     font-weight: 700;
     color: var(--light);
+    letter-spacing: 2px;
   }
 `;
