@@ -30,15 +30,25 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 
 ---
 
-## Technologies
+## ✨ Features
+
+[x] Set random word by theme
+[x] Shows each member of the man as the user guesses a wrong letter in the word
+[x] Show final message at the end of the game informing whether the user has won or not
+[x] Show visual feedback on keyboard
+[x] Allow the user to restart the game whenever he wants
+ 
+
+---
+
+## 🛠️ Technologies
 
 This app was developed using the following technologies:
 
-✔️ **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
+✔️ **[ReactJs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
 
-✔️ **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
+✔️ **[TypeScript](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
 
-✔️ **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
 
 ---
 
