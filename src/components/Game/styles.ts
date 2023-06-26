@@ -6,12 +6,20 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  padding-bottom: 1.2rem;
+
   h1 {
     color: var(--light);
     text-decoration: underline;
     letter-spacing: 2px;
 
     margin: 1.2rem 0;
+
+    & {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
   }
 
   .letters {
@@ -35,7 +43,7 @@ export const Container = styled.div`
 
   > button {
     display: block;
-    margin-top: 3.6rem;
+    margin-top: 2.8rem;
     margin-inline: auto;
     padding: 1.2rem;
     border-radius: var(--border-radius);

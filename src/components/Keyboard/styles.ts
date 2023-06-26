@@ -9,6 +9,12 @@ export const Container = styled.div`
   gap: 1.2rem;
 
   margin-top: 3.2rem;
+
+  & {
+    @media (max-width: 600px) {
+      width: 300px;
+    }
+  }
 `;
 
 interface LetterProps {
