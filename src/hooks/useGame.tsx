@@ -27,12 +27,12 @@ export function GameProvider({ children }: GameProviderProps) {
 
   function getRandomWord(words: string[]) {
     const randomIndex = Math.floor(Math.random() * words.length);
-    return words[randomIndex]
+    return words[randomIndex];
   }
 
   function initGame(theme: Theme) {
     setTheme(theme.name);
-    setWord(getRandomWord(theme.words))
+    setWord(getRandomWord(theme.words));
 
     setIsThemeModalOpen(false);
   }

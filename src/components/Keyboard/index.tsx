@@ -1,10 +1,18 @@
 import { Container, Letter } from "./styles";
-const letters = 'qerwtyuiopasdfghjklzxcvbnm' ;
+const letters = "qerwtyuiopasdfghjklzxcvbnm";
 
-export function Keyboard() {
+interface KeyboardProps {
+  onClick: (letter: string) => void;
+}
+
+export function Keyboard({ onClick }: KeyboardProps) {
   return (
     <Container>
-      {letters.split("").map(letter => <Letter key={letter}>{letter}</Letter>)}
+      {letters.split("").map((letter) => (
+        <Letter key={letter} onClick={() => onClick(letter)}>
+          {letter}
+        </Letter>
+      ))}
     </Container>
   );
 }
