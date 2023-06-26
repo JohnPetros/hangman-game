@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: fit-content;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .letters {
     display: flex;
@@ -53,5 +55,20 @@ export const Letter = styled.div<LetterProps>`
 
   & + div {
     margin-left: 1.2rem;
+  }
+`;
+
+interface FinalMessageProps {
+  isWin: boolean;
+}
+
+export const FinalMessage = styled.p<FinalMessageProps>`
+  margin-top: 3.2rem;
+
+  color: ${({ isWin }) => (isWin ? "var(--success)" : "var(--error)")};
+  font-size: 2.4rem;
+  > span {
+    font-weight: 700;
+    color: var(--light);
   }
 `;

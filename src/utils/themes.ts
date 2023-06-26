@@ -21,7 +21,6 @@ export const themes = [
       "mobile",
       "lavarel",
       "nodejs",
-      "reactnative",
       "webpack",
       "spring",
       "bootsrap",
