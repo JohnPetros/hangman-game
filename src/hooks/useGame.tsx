@@ -1,6 +1,7 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
 interface GameProviderData {
+  word: string;
   theme: string;
   isThemeModalOpen: boolean;
   setIsThemeModalOpen: (isThemeModalOpen: boolean) => void;
@@ -24,18 +25,21 @@ export function GameProvider({ children }: GameProviderProps) {
   const [theme, setTheme] = useState("");
   const [word, setWord] = useState("");
 
-  function getRandomWord(words: string[]) {}
+  function getRandomWord(words: string[]) {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    return words[randomIndex]
+  }
 
   function initGame(theme: Theme) {
     setTheme(theme.name);
-    console.log(theme.words);
+    setWord(getRandomWord(theme.words))
 
     setIsThemeModalOpen(false);
   }
 
   return (
     <GameContext.Provider
-      value={{ theme, isThemeModalOpen, setIsThemeModalOpen, initGame }}
+      value={{ word, theme, isThemeModalOpen, setIsThemeModalOpen, initGame }}
     >
       {children}
     </GameContext.Provider>

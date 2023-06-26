@@ -2,12 +2,10 @@ import { useGame } from "../../hooks/useGame";
 import { themes } from "../../utils/themes";
 import { Container, Content, Theme } from "./styles";
 
-interface ThemesModalProps {
-  isOpen: boolean;
-}
+export function ThemesModal() {
+  const { isThemeModalOpen, initGame } = useGame();
 
-export function ThemesModal({ isOpen }: ThemesModalProps) {
-  const { initGame } = useGame();
+  if (!isThemeModalOpen) return;
 
   return (
     <Container>

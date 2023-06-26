@@ -1,9 +1,11 @@
+import { useGame } from "../../hooks/useGame";
 import { Hangman } from "../Hangman";
 import { Keyboard } from "../Keyboard";
 import { Container, Letter } from "./styles";
-const word = "html";
 
 export function Game() {
+  const { word } = useGame();
+
   return (
     <Container>
       <Hangman />
@@ -15,6 +17,8 @@ export function Game() {
       </div>
 
       <Keyboard />
-    </Container> 
+
+      <button type="button">Reset game</button>
+    </Container>
   );
 }
