@@ -25,7 +25,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Letter = styled.div`
+interface LetterProps {
+  isVisible: boolean;
+}
+
+export const Letter = styled.div<LetterProps>`
   display: inline-block;
   margin-top: 3.2rem;
 
@@ -35,7 +39,7 @@ export const Letter = styled.div`
   font-size: 2.4rem;
   font-weight: 700;
 
-  color: var(--light);
+  color: ${({ isVisible }) => (isVisible ? "var(--light)" : "transparent")};
 
   &::after {
     content: "";

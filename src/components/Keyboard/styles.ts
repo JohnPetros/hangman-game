@@ -11,8 +11,21 @@ export const Container = styled.div`
   margin-top: 3.2rem;
 `;
 
-export const Letter = styled.button`
-  background-color: var(--light);
+interface LetterProps {
+  isCorrect: boolean;
+  isIncorrect: boolean;
+}
+
+export const Letter = styled.button<LetterProps>`
+  background-color: ${({ isCorrect, isIncorrect }) => {
+    if (isCorrect) {
+      return "var(--success)";
+    } else if (isIncorrect) {
+      return "var(--error)";
+    } else {
+      return "var(--light)";
+    }
+  }};
   color: var(--dark);
 
   font-size: 1.6rem;
@@ -31,6 +44,10 @@ export const Letter = styled.button`
 
   &:hover {
     transform: translateY(-2px);
+  }
+
+  &:disabled {
+    pointer-events: none;
   }
 
   &:active {

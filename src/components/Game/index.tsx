@@ -9,7 +9,6 @@ export function Game() {
   const [errors, setErrors] = useState(0);
   const [correctedLetters, setCorrectedLetters] = useState<string[]>([]);
   const [incorrectedLetters, setIncorrectedsLetters] = useState<string[]>([]);
-  console.log(correctedLetters, incorrectedLetters);
 
   function handleClickedLetter(letter: string) {
     const isVerified =
@@ -39,11 +38,15 @@ export function Game() {
 
       <div className="letters">
         {word.split("").map((letter, index) => (
-          <Letter key={String(index)}>{letter}</Letter>
+          <Letter isVisible={correctedLetters.includes(letter)} key={String(index)}>{letter}</Letter>
         ))}
       </div>
 
-      <Keyboard onClick={handleClickedLetter} />
+      <Keyboard
+        onClick={handleClickedLetter}
+        correctedLetters={correctedLetters}
+        incorrectedLetters={incorrectedLetters}
+      />
 
       <button type="button">Reset game</button>
     </Container>
