@@ -75,7 +75,7 @@ $ npm install or yarn add
 
 ## ⚙️ Deploy
 
-This app was deployed by **[Vercel](https://pages.github.com/)**. This means you can access the running app by accessing this **[link](https://johnpetros.github.io/hangman-game/)**.
+This app was deployed by **[Vercel](https://pages.github.com/)**. This means you can access the running app by accessing this **[link]([https://hangman-game-murex.vercel.app/)**.
 
 ---
 
@@ -97,7 +97,7 @@ $ git commit -m 'feat: My new feature';
 $ git push origin my-feature
 
 ```
-> You also can open a new issue report. It will be an honor to be able to help you solve and further improve this application.
+> You also can open a [new issue report](https://github.com/JohnPetros/hangman-game/issues). It will be an honor to be able to help you solve and further improve this application.
 
 ---
 
