@@ -45,9 +45,9 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 
 This app was developed using the following technologies:
 
-✔️ **[ReactJs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
+✔️ **[ReactJs](https://react.dev/)**
 
-✔️ **[TypeScript](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
+✔️ **[TypeScript](https://www.typescriptlang.org/)**
 
 
 ---
