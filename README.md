@@ -97,7 +97,7 @@ $ git commit -m 'feat: My new feature';
 $ git push origin my-feature
 
 ```
-> You also can open a [new issue report](https://github.com/JohnPetros/hangman-game/issues). It will be an honor to be able to help you solve and further improve this application.
+> You also can open a [new issue report](https://github.com/JohnPetros/hangman-game/issues). It will be an honor to be able to help you and improve this application as well.
 
 ---
 
