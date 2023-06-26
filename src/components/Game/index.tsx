@@ -15,6 +15,6 @@ export function Game() {
       </div>
 
       <Keyboard />
-    </Container>
+    </Container> 
   );
 }

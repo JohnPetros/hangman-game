@@ -1,13 +1,16 @@
-import { Game } from "./components/Game"
+import { Game } from "./components/Game";
 import { ThemesModal } from "./components/ThemesModal";
 import GlobalStyles from "./styles/global";
+import { GameProvider, useGame } from "./hooks/useGame";
 
 export function App() {
+  const { isThemeModalOpen } = useGame();
+
   return (
-    <main>
+    <GameProvider>
       <Game />
-      {/* <ThemesModal /> */}
+      <ThemesModal isOpen={isThemeModalOpen} />
       <GlobalStyles />
-    </main>
+    </GameProvider>
   );
 }
