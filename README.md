@@ -26,13 +26,7 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 
 ### ⏹️ Demonstration
 
-### Desktop 💻
-
-![image](https://github.com/JohnPetros/hangman-game/assets/93893533/a4cd84c3-ed4c-45f6-814e-de017c012fb6)
-
-### mobile 📱
-
-![image](https://github.com/JohnPetros/hangman-game/assets/93893533/7dcc470b-c491-4d80-8d1a-94454a5bb0e4)
+![image](https://github.com/JohnPetros/hangman-game/assets/93893533/3913386d-135f-4449-8665-caedfc4a1062)
 
 ---
 
