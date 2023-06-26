@@ -75,7 +75,7 @@ $ npm install or yarn add
 
 ## ⚙️ Deploy
 
-This app was deployed by **[Vercel](https://pages.github.com/)**. This means you can access the running app by accessing this **[link]([https://hangman-game-murex.vercel.app/)**.
+This app was deployed by **[Vercel](https://vercel.com/home)**. This means you can access the running app by accessing this **[link](https://hangman-game-murex.vercel.app/)**.
 
 ---
 
