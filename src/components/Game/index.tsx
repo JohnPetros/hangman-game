@@ -1,15 +1,24 @@
 import { useState } from "react";
-import { useGame } from "../../hooks/useGame";
+import { useWord } from "../../hooks/useWord";
 import { Hangman } from "../Hangman";
 import { Keyboard } from "../Keyboard";
 import { Container, Letter, FinalMessage } from "./styles";
 
 export function Game() {
-  const { word } = useGame();
+  const { word, _resetWord } = useWord();
   const [errorsAmount, setErrorsAmount] = useState(0);
   const [correctedLetters, setCorrectedLetters] = useState<string[]>([]);
   const [incorrectedLetters, setIncorrectedsLetters] = useState<string[]>([]);
   const [endGameMessage, setEndGameMessage] = useState("");
+
+  function handleResetButtonClick() {
+    setErrorsAmount(0);
+    setCorrectedLetters([]);
+    setIncorrectedsLetters([]);
+    setEndGameMessage("");
+
+    _resetWord();
+  }
 
   function handleClickedLetter(letter: string) {
     const isCorrect = word.includes(letter);
@@ -64,7 +73,9 @@ export function Game() {
         />
       )}
 
-      <button type="button">Reset game</button>
+      <button type="button" onClick={handleResetButtonClick}>
+        Reset game
+      </button>
     </Container>
   );
 }

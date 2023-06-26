@@ -1,14 +1,14 @@
 import { Game } from "./components/Game";
 import { ThemesModal } from "./components/ThemesModal";
 import GlobalStyles from "./styles/global";
-import { GameProvider } from "./hooks/useGame";
+import { WordProvider } from "./hooks/useWord";
 
 export function App() {
   return (
-    <GameProvider>
+    <WordProvider>
       <Game />
-       <ThemesModal />
+      <ThemesModal />
       <GlobalStyles />
-    </GameProvider>
+    </WordProvider>
   );
 }

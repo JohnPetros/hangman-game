@@ -1,14 +1,15 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
-interface GameProviderData {
+interface WordProviderData {
   word: string;
   theme: string;
   isThemeModalOpen: boolean;
   setIsThemeModalOpen: (isThemeModalOpen: boolean) => void;
-  initGame: (theme: Theme) => void;
+  _setWord: (theme: Theme) => void;
+  _resetWord: () => void;
 }
 
-interface GameProviderProps {
+interface WordProviderProps {
   children: ReactNode;
 }
 
@@ -18,9 +19,9 @@ interface Theme {
   words: string[];
 }
 
-const GameContext = createContext<GameProviderData>({} as GameProviderData);
+const WordContext = createContext<WordProviderData>({} as WordProviderData);
 
-export function GameProvider({ children }: GameProviderProps) {
+export function WordProvider({ children }: WordProviderProps) {
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(true);
   const [theme, setTheme] = useState("");
   const [word, setWord] = useState("");
@@ -30,23 +31,37 @@ export function GameProvider({ children }: GameProviderProps) {
     return words[randomIndex];
   }
 
-  function initGame(theme: Theme) {
-    setTheme(theme.name);
+  function _setWord(theme: Theme) {
     setWord(getRandomWord(theme.words));
+    setTheme(theme.name);
 
     setIsThemeModalOpen(false);
   }
 
+  function _resetWord() {
+    setWord("");
+    setTheme("");
+
+    setIsThemeModalOpen(true);
+  }
+
   return (
-    <GameContext.Provider
-      value={{ word, theme, isThemeModalOpen, setIsThemeModalOpen, initGame }}
+    <WordContext.Provider
+      value={{
+        word,
+        theme,
+        isThemeModalOpen,
+        setIsThemeModalOpen,
+        _setWord,
+        _resetWord,
+      }}
     >
       {children}
-    </GameContext.Provider>
+    </WordContext.Provider>
   );
 }
 
-export function useGame() {
-  const context = useContext(GameContext);
+export function useWord() {
+  const context = useContext(WordContext);
   return context;
 }
