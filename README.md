@@ -34,12 +34,12 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 
 ## ✨ Features
 
-[x] Set random word by theme
-[x] Shows each member of the man as the user guesses a wrong letter in the word
-[x] Show final message at the end of the game informing whether the user has won or not
-[x] Show visual feedback on keyboard
-[x] Allow the user to restart the game whenever he wants
-[x] Listen to both click and key press events
+- [x] Set random word by theme
+- [x] Shows each member of the man as the user guesses a wrong letter in the word
+- [x] Show final message at the end of the game informing whether the user has won or not
+- [x] Show visual feedback on keyboard
+- [x] Allow the user to restart the game whenever he wants
+- [x] Listen to both click and key press events
 
 ---
 
