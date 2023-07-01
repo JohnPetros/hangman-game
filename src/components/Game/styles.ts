@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
 
   padding-bottom: 1.2rem;
+  text-align: center;
 
   h1 {
     color: var(--light);
@@ -24,6 +25,7 @@ export const Container = styled.div`
 
   .letters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 

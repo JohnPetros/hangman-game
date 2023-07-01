@@ -26,7 +26,9 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 
 ### ⏹️ Demonstration
 
-![image](https://github.com/JohnPetros/hangman-game/assets/93893533/3913386d-135f-4449-8665-caedfc4a1062)
+<div align="center">
+   <img src="./.github/preview.png" width="500" alt="Preview of the running app" />
+</div>
 
 ---
 
@@ -37,7 +39,7 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 [x] Show final message at the end of the game informing whether the user has won or not
 [x] Show visual feedback on keyboard
 [x] Allow the user to restart the game whenever he wants
- 
+[x] Listen to both click and key press events
 
 ---
 
@@ -48,7 +50,6 @@ This app was developed using the following technologies:
 ✔️ **[ReactJs](https://react.dev/)**
 
 ✔️ **[TypeScript](https://www.typescriptlang.org/)**
-
 
 ---
 
@@ -71,7 +72,10 @@ $ cd hangman-game
 # Install the dependecies
 $ npm install or yarn add
 
-# The app will runnig on http://localhost:5174
+# Run the app in development mode
+$ npm run dev or yarn dev
+
+# The app will probably runnig on http://localhost:5173
 
 ```
 
@@ -85,7 +89,6 @@ This app was deployed by **[Vercel](https://vercel.com/home)**. This means you c
 
 ## 💪 How to contribute
 
-
 ```bash
 
 # Fork this repo
@@ -94,13 +97,14 @@ $ git clone https://github.com/JohnPetros/hangman-game.git
 # Create a branch with your feature;
 $ git checkout -b my-feature;
 
-# Commit your changes: 
+# Commit your changes:
 $ git commit -m 'feat: My new feature';
 
 # Push to your branch:
 $ git push origin my-feature
 
 ```
+
 > You also can open a [new issue report](https://github.com/JohnPetros/hangman-game/issues). It will be an honor to be able to help you and improve this application as well.
 
 ---

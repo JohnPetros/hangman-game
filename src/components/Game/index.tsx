@@ -20,7 +20,7 @@ export function Game() {
     _resetWord();
   }
 
-  function handleClickedLetter(letter: string) {
+  function handleTypedLetter(letter: string) {
     const isCorrect = word.includes(letter);
 
     if (isCorrect) {
@@ -43,6 +43,8 @@ export function Game() {
 
     const newErrorsAmount = errorsAmount + 1;
     setErrorsAmount(newErrorsAmount);
+    console.log({ errorsAmount });
+    console.log({ letter });
 
     if (newErrorsAmount === 6) {
       setEndGameMessage("You lost 😢!");
@@ -77,7 +79,8 @@ export function Game() {
         </FinalMessage>
       ) : (
         <Keyboard
-          onClick={handleClickedLetter}
+          onClick={handleTypedLetter}
+          onKeyDown={handleTypedLetter}
           correctedLetters={correctedLetters}
           incorrectedLetters={incorrectedLetters}
         />
