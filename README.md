@@ -31,7 +31,6 @@ This app is a **Hangman game** in which the user have to guess a word before a m
 </div>
 
 ---
-
 ## ✨ Features
 
 - [x] Set random word by theme
