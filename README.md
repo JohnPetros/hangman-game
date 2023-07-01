@@ -95,10 +95,10 @@ This app was deployed by **[Vercel](https://vercel.com/home)**. This means you c
 $ git clone https://github.com/JohnPetros/hangman-game.git
 
 # Create a branch with your feature;
-$ git checkout -b my-feature;
+$ git checkout -b my-feature
 
 # Commit your changes:
-$ git commit -m 'feat: My new feature';
+$ git commit -m 'feat: My new feature'
 
 # Push to your branch:
 $ git push origin my-feature
